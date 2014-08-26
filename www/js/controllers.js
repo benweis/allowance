@@ -1,6 +1,6 @@
 angular.module('ionicApp', ['ionic'])
 
-.controller('MyCtrl', function($scope) {
+app.controller('MyCtrl', function($scope) {
   
   $scope.data = {
     showDelete: false

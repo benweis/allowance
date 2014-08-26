@@ -1,10 +1,23 @@
 angular.module('ionicApp', ['ionic'])
 
-.controller('MyCtrl', function($scope) {
+app.controller('MyCtrl', function($scope, $ionicActionSheet) {
   
   $scope.data = {
     showDelete: false
   };
+
+  $scope.showDetails = function() {
+    $ionicActionSheet.show({
+     buttons: [
+       { text: 'Complete' }
+     ],
+     destructiveText: 'Delete',
+     titleText: 'Update Todo',
+     cancelText: 'Cancel',
+     buttonClicked: function(index) {
+       return true;
+     }
+   });
   
   $scope.edit = function(item) {
     alert('Edit Item: ' + item.id);
